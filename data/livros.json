@@ -1,0 +1,17 @@
+[
+{
+    "id": 1,
+    "titulo" : "senhor do aneis",
+    "tipo" : "ficção"
+},
+{
+    "id": 2,
+    "titulo" : "codigo limpo",
+    "tipo" : "didatico"
+},
+{
+    "id": 3,
+    "titulo" : "Dom Casmurro",
+    "tipo" : "Romance"
+}
+]
