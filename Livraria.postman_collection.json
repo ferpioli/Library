@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "29d8a2bb-7b70-4356-92b9-2ba5374024f6",
+		"name": "Livraria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "/GET-library-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/livros/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"livros",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/GET-Library",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post/Library",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"titulo\" : \"Harry Potter\",\r\n    \"tipo\" : \"ficção\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"livros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
