@@ -67,13 +67,29 @@ router.post("/", (req, res) => {
     livro.save().then((err, livro) => {
         if (err) res.status(500).send(err);
         res.json(livro);
-    })
+    });
 });
 
 
-router.put("/", (req, res) => {
-    console.log('tratando put');
-    res.end();
+router.put("/:id", (req, res) => {
+    livrosModel.findById(req.params.id, (err, livro) => {
+        if (err) res.status(500).send(err);
+
+        if (livro) {
+            livro.titulo = req.body.titulo;
+            livro.tipo = req.body.tipo;
+
+            livro.save().then((err, livro) => {
+                if (err) res.status(500).send(err);
+                res.json(livro);
+
+            });
+
+        }else {
+            res.status(404).send(`Livro com ID ${req.params.id} não encontrado`)
+        }
+    });
+
 });
 
 router.delete("/", (req, res) => {

@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/livros/4",
+							"raw": "http://localhost:3000/api/v1/livros/608732b481dadc2a1ca568fe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -24,7 +24,7 @@
 								"api",
 								"v1",
 								"livros",
-								"4"
+								"608732b481dadc2a1ca568fe"
 							]
 						}
 					},
@@ -58,7 +58,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 4,\r\n    \"titulo\" : \"Harry Potter\",\r\n    \"tipo\" : \"ficção\"\r\n}",
+							"raw": "{\r\n  \"titulo\" : \"Dom Casmurro\",\r\n    \"tipo\" : \"Romance\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -82,6 +82,37 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "/PUT-Library",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\" : \"Dom Casmurro-Original\",\r\n    \"tipo\" : \"Romance-brasileiro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/livros/608732b481dadc2a1ca568fe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"livros",
+						"608732b481dadc2a1ca568fe"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
