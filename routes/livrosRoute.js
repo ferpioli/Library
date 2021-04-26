@@ -73,9 +73,7 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
     livrosModel.findById(req.params.id, (err, livro) => {
-        if (err) res.status(500).send(err);
-
-        if (livro) {
+          if (livro) {
             livro.titulo = req.body.titulo;
             livro.tipo = req.body.tipo;
 
