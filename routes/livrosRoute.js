@@ -73,7 +73,7 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
     livrosModel.findById(req.params.id, (err, livro) => {
-          if (livro) {
+        if (livro) {
             livro.titulo = req.body.titulo;
             livro.tipo = req.body.tipo;
 
@@ -83,16 +83,18 @@ router.put("/:id", (req, res) => {
 
             });
 
-        }else {
+        } else {
             res.status(404).send(`Livro com ID ${req.params.id} não encontrado`)
         }
     });
 
 });
 
-router.delete("/", (req, res) => {
-    console.log('tratando delete');
-    res.end();
+router.delete("/:id", (req, res) => {
+   livrosModel.findByIdAndDelete(req.params.id, (err, livro) => {
+       if(err)res.status(500).send(err);
+       res.status(200).send(`Livro com id ${req.params.id} deletado com sucesso.`)
+   })
 });
 
 /*router.param("id", (req, res, next, id) => {
